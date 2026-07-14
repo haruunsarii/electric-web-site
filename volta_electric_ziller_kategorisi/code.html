@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ziller - Volta Electric</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#191c1e",
+                    "secondary-fixed-dim": "#ffb690",
+                    "surface": "#f7f9fb",
+                    "secondary": "#9d4300",
+                    "on-surface-variant": "#45464d",
+                    "outline": "#76777d",
+                    "on-tertiary-fixed": "#0d1c2f",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-container": "#0d1c2f",
+                    "on-primary-container": "#7c839b",
+                    "secondary-fixed": "#ffdbca",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-fixed": "#341100",
+                    "on-tertiary-container": "#76859b",
+                    "on-surface": "#191c1e",
+                    "inverse-primary": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-bright": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c6c6cd",
+                    "on-secondary-fixed-variant": "#783200",
+                    "tertiary": "#000000",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#b9c7e0",
+                    "primary": "#000000",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#3a485c",
+                    "tertiary-fixed": "#d5e3fd",
+                    "surface-tint": "#565e74",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#5c2400",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-container": "#131b2e",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-dim": "#d8dadc",
+                    "primary-fixed-dim": "#bec6e0",
+                    "secondary-container": "#fd761a",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "16px",
+                    "xl": "64px",
+                    "xs": "8px",
+                    "md": "24px",
+                    "container-max": "1280px",
+                    "lg": "40px",
+                    "base": "4px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-technical": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Inter"],
+                    "button-text": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-technical": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #f7f9fb; }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .filter-checkbox:checked {
+            background-color: #000000;
+            border-color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<!-- Brand -->
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed cursor-pointer">
+                VOLTA ELECTRIC
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-md h-full items-center">
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">Kurumsal</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1 px-3 py-2 font-button-text text-button-text" href="#">Kategoriler</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">Katalog</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">İletişim</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-sm">
+<!-- Trailing Icon Actions -->
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-full transition-colors active:scale-95 hidden md:block">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<!-- Trailing Primary Action -->
+<button class="bg-secondary text-on-secondary px-sm py-[12px] rounded uppercase font-button-text text-button-text tracking-wider hover:bg-secondary-container transition-colors active:scale-95 hidden md:block">
+                    Bize Ulaşın
+                </button>
+</div>
+</div>
+</header>
+<div class="flex flex-1 w-full max-w-container-max mx-auto">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col gap-sm p-md bg-surface-container-low dark:bg-surface-container-highest border-r border-outline-variant dark:border-outline shadow-md dark:shadow-none w-64 h-[calc(100vh-80px)] sticky top-20 overflow-y-auto">
+<div class="mb-md">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Kategoriler</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Endüstriyel Çözümler</p>
+</div>
+<nav class="flex flex-col gap-xs flex-1">
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">lightbulb</span>
+<span>Ampul</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span>Led Paneller</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary font-semibold rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<span>Ziller</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">settings_input_component</span>
+<span>Sigortalar</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">linear_scale</span>
+<span>Bant Armatür</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">yard</span>
+<span>Bahçe Armatür</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">flashlight_on</span>
+<span>Projektör</span>
+</a>
+</nav>
+<div class="mt-auto pt-md border-t border-outline-variant">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary px-sm py-[12px] rounded uppercase font-button-text text-button-text tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-95 border border-primary">
+<span class="material-symbols-outlined">download</span>
+                    Katalog İndir
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-gutter w-full">
+<!-- Header Section -->
+<div class="mb-lg border-b border-outline-variant pb-sm flex flex-col md:flex-row justify-between items-start md:items-end gap-sm">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-2 hidden md:block">Ziller</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2 md:hidden">Ziller</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Endüstriyel ve ev tipi kapı zilleri, çanlar ve uyarı sistemleri.</p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Sırala:</span>
+<select class="bg-surface border-outline-variant border rounded text-body-sm font-body-sm p-1 focus:border-primary focus:ring-1 focus:ring-primary-fixed outline-none">
+<option>Önerilen</option>
+<option>Fiyat: Düşükten Yükseğe</option>
+<option>Fiyat: Yüksekten Düşüğe</option>
+<option>Yeni Ürünler</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-lg">
+<!-- Filter Section -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-sm sticky top-24">
+<h3 class="font-headline-md text-headline-md text-primary mb-md pb-2 border-b border-outline-variant">Filtreler</h3>
+<!-- Filter Group 1 -->
+<div class="mb-md">
+<h4 class="font-button-text text-button-text text-on-surface mb-2">Bağlantı Tipi</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input checked="" class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    Kablolu (24)
+                                </label>
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    Kablosuz (18)
+                                </label>
+</div>
+</div>
+<!-- Filter Group 2 -->
+<div class="mb-md">
+<h4 class="font-button-text text-button-text text-on-surface mb-2">Melodi Sayısı</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    Tek Melodi (Din-Don) (15)
+                                </label>
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    32+ Melodi Seçeneği (27)
+                                </label>
+</div>
+</div>
+<!-- Filter Group 3 -->
+<div class="mb-md">
+<h4 class="font-button-text text-button-text text-on-surface mb-2">Marka</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    Volta (12)
+                                </label>
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    Schneider (8)
+                                </label>
+<label class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant cursor-pointer hover:text-primary">
+<input class="filter-checkbox rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+                                    Legrand (10)
+                                </label>
+</div>
+</div>
+<button class="w-full mt-4 bg-surface text-primary border border-primary px-sm py-2 rounded uppercase font-button-text text-button-text tracking-wider hover:bg-surface-container transition-colors">
+                            Filtreleri Temizle
+                        </button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1 tech-grid">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+<div class="relative bg-[#F1F5F9] p-md flex items-center justify-center h-48 border-b border-outline-variant overflow-hidden">
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="bg-secondary text-on-secondary px-2 py-1 rounded-[2px] font-label-technical text-[10px] uppercase font-bold tracking-wider">YENİ</span>
+</div>
+<img class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-500" data-alt="A clean, isolated product shot of a modern white minimalist electronic door bell receiver unit. The device has a smooth matte finish, a simple speaker grill pattern, and a small subtle LED indicator light. The lighting is studio quality, bright, creating soft shadows on a pristine light grey background, emphasizing a corporate B2B technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbz4dOi7KsDPaECDU4chga178zZvpxFDNEjYGIOX9nCj-Qf0D-NUc3Lnx6xVc6rowLMeu0T0HX5p_irM-llhEXnt887T-G9FETNFva5bWDb7P5RkY0p5GLhTHmTdhZR2ZTSxugKvaifeVnYR5q9l-Lp5ikNkjn-fOh9GksB2vriNrgbOdh4kyIt9QapVY-kdYxhUJxS1XES4UGoxF1AwckyOhifi2zOhA4giz6mnXuhT8dPAoPpb50qKjBHwptvni-oQzdEUhDJ-Bu"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Volta</p>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-2">V-Bell Plus Kablosuz Zil Seti</h3>
+<div class="mt-auto pt-sm border-t border-outline-variant mt-4">
+<div class="grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant mb-4">
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Bağlantı</span>
+<span>Kablosuz (RF)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Menzil</span>
+<span>150m</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Melodi</span>
+<span>38 Adet</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Güç</span>
+<span>Pilli / 220V</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-body-sm text-body-sm text-outline line-through">₺450,00</p>
+<p class="font-headline-md text-headline-md text-primary">₺385,00</p>
+</div>
+<button class="p-2 border border-primary text-primary rounded hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+<div class="relative bg-[#F1F5F9] p-md flex items-center justify-center h-48 border-b border-outline-variant overflow-hidden">
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="bg-surface-tint text-on-primary px-2 py-1 rounded-[2px] font-label-technical text-[10px] uppercase font-bold tracking-wider">STOKTA</span>
+</div>
+<img class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-500" data-alt="A professional product photograph of a classic white rectangular wired door chime box. It has a utilitarian design, typical of industrial or standard residential installations. The surface is slightly textured hard plastic. It is shot straight-on against a neutral light grey backdrop with crisp, even lighting to highlight its geometric form." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWzBMI2BuiIzOQ5ssZ3REaRLnLcTePW1_htUIiO5fOnhgxhkjYXmWQHNTSNude_eypfmwGEMgdR761xe3y21G3xyPtfDdXG2W3C76FCZq2M_9P1lmQCM1ue_GGXr_adRPamoMC2qY0LdcJjzloDnf5xc1PvJBFj9S1RzqZ3qKBZdtAAPo6JZCAgEZby9A4IknXwodEo4JP8ESAP1yNElBwILdEIgBt89C33oOGnAyDMdipTL7F4IC_LjWir8_6RYfD90ZinVzWwYfE"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Schneider</p>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-2">Klasik Din-Don Kablolu Zil</h3>
+<div class="mt-auto pt-sm border-t border-outline-variant mt-4">
+<div class="grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant mb-4">
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Bağlantı</span>
+<span>Kablolu</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Montaj</span>
+<span>Sıva Üstü</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Melodi</span>
+<span>Mekanik Çift Ses</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Güç</span>
+<span>220V AC</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-headline-md text-headline-md text-primary">₺120,00</p>
+</div>
+<button class="p-2 border border-primary text-primary rounded hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+<div class="relative bg-[#F1F5F9] p-md flex items-center justify-center h-48 border-b border-outline-variant overflow-hidden">
+<div class="absolute top-2 left-2 flex gap-1">
+<span class="bg-surface-tint text-on-primary px-2 py-1 rounded-[2px] font-label-technical text-[10px] uppercase font-bold tracking-wider">STOKTA</span>
+<span class="bg-primary text-on-primary px-2 py-1 rounded-[2px] font-label-technical text-[10px] uppercase font-bold tracking-wider">ENDÜSTRİYEL</span>
+</div>
+<img class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed studio shot of a heavy-duty industrial alarm bell. The bell is bright red metallic, shaped like a classic fire alarm gong, mounted on a robust grey metal base box. The lighting emphasizes the metallic sheen and solid construction, set against a stark white background. The image conveys ruggedness and loud volume suitable for factory settings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDopIaOKiYiOeNSRzvKPX3hJk40v01Fa3fq8_TZlgkbw2xA9gc_KV4jq391mjp-i_YtIuIgaQJWQ9eAi7DnjvctZGhjwUoI5J-E26JFYUZt_XFqOGZoQV2LPFr1mXOcAqmugNWisMFUkBoOMhXobrgYAHWDure82opc7pfEmWYp1BOoA33vxDNseMLvyIhRNJHOuVnRwOmvAMHz-YEwHKAuYsOEO-k7Xp-KDg3wZL7EVyhgbaZ5AE3DetmQK_KVQr2VKcgFTAq7UDeq"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Volta Pro</p>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-2">Sanayi Tipi Çan Zil 15cm</h3>
+<div class="mt-auto pt-sm border-t border-outline-variant mt-4">
+<div class="grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant mb-4">
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Bağlantı</span>
+<span>Kablolu</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Ses Seviyesi</span>
+<span>95 dB</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Materyal</span>
+<span>Çelik / Metal</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Güç</span>
+<span>24V DC / 220V AC</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-headline-md text-headline-md text-primary">₺850,00</p>
+</div>
+<button class="p-2 border border-primary text-primary rounded hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+<div class="relative bg-[#F1F5F9] p-md flex items-center justify-center h-48 border-b border-outline-variant overflow-hidden">
+<img class="object-contain h-full w-full group-hover:scale-105 transition-transform duration-500" data-alt="A macro product photograph showing a sleek, modern modular smart doorbell button designed to fit into standard electrical switch frames. It features a brushed metal faceplate and a central backlit button with a subtle blue ring glow. The background is a clean, out-of-focus light grey, highlighting the premium finish of the electrical hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClezvwMoR-NDu3vsCUy8HW79z2t_cpUcdjUyxB9c02jP8c9J4NX0SDnbNPvKSJEKBVPw3r1Ua0QpLaPBmZPg3VOAVEaMDuRiyt2RBhYsVFUaL71-b8ZOlngzAQ4mex6BUO7MJBhXmaK4lf6ocrXOjP7q28vP0iGdXRYj5wOoLYEyxB8ZKd2iatrdFmCUcIRz2Z78vLE-MMDMAxqQZMV4SkHj3ZGngAXDIxbLWY7OTXN7bnoALdSk-0HnPCUguE_zHdVZfXcGVybXMy"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Legrand</p>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-2">Salbei Serisi Işıklı Zil Butonu</h3>
+<div class="mt-auto pt-sm border-t border-outline-variant mt-4">
+<div class="grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant mb-4">
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Bağlantı</span>
+<span>Kablolu</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Tip</span>
+<span>Buton (Mekanizma)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Özellik</span>
+<span>LED Işıklı</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[11px]">Montaj</span>
+<span>Sıva Altı (Kasa)</span>
+</div>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<p class="font-headline-md text-headline-md text-primary">₺185,00</p>
+</div>
+<button class="p-2 border border-primary text-primary rounded hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-primary-fixed w-full mt-xl border-t border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">
+                VOLTA ELECTRIC
+            </div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer font-body-sm text-body-sm" href="#">KVKK</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer font-body-sm text-body-sm" href="#">Garanti Koşulları</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer font-body-sm text-body-sm" href="#">Teslimat</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer font-body-sm text-body-sm" href="#">İade Politikası</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                © 2024 Volta Electric. Tüm hakları saklıdır.
+            </div>
+</div>
+</footer>
+</body></html>

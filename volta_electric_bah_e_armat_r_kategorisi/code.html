@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bahçe Armatür | VOLTA ELECTRIC</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#ffb690",
+                        "surface": "#f7f9fb",
+                        "secondary": "#9d4300",
+                        "on-surface-variant": "#45464d",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#0d1c2f",
+                        "on-primary-container": "#7c839b",
+                        "secondary-fixed": "#ffdbca",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#341100",
+                        "on-tertiary-container": "#76859b",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#bec6e0",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary-fixed-variant": "#783200",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "tertiary-fixed": "#d5e3fd",
+                        "surface-tint": "#565e74",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#5c2400",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#131b2e",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-container": "#fd761a",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "64px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "container-max": "1280px",
+                        "lg": "40px",
+                        "base": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "button-text": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-technical": ["13px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "button-text": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom scrollbar for minimalist feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c6c6cd;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #76777d;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- Shared Component: SideNavBar -->
+<aside class="h-full w-64 fixed left-0 top-0 bg-surface-container-low border-r border-outline-variant shadow-md z-40 hidden lg:flex flex-col gap-sm p-md">
+<!-- Header / Logo Area -->
+<div class="flex items-center gap-sm mb-md px-xs">
+<div class="w-10 h-10 bg-primary rounded flex items-center justify-center text-on-primary font-headline-md">V</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Kategoriler</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Endüstriyel Çözümler</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 flex flex-col gap-xs overflow-y-auto pr-2">
+<a class="text-on-surface-variant hover:bg-surface-variant hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<span class="font-body-md text-body-md">Ampul</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<span class="font-body-md text-body-md">Led Paneller</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+<span class="font-body-md text-body-md">Ziller</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">settings_input_component</span>
+<span class="font-body-md text-body-md">Sigortalar</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">linear_scale</span>
+<span class="font-body-md text-body-md">Bant Armatür</span>
+</a>
+<!-- Active State -->
+<a class="bg-primary-container text-on-primary-container font-semibold rounded-lg hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px] icon-fill">yard</span>
+<span class="font-body-md text-body-md">Bahçe Armatür</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-variant hover:pl-2 transition-all duration-300 flex items-center gap-xs px-sm py-xs rounded" href="#">
+<span class="material-symbols-outlined text-[20px]">flashlight_on</span>
+<span class="font-body-md text-body-md">Projektör</span>
+</a>
+</nav>
+<!-- CTA -->
+<div class="mt-auto pt-md border-t border-outline-variant">
+<button class="w-full bg-surface-container-highest border border-outline text-primary font-button-text text-button-text py-3 px-4 rounded hover:bg-surface-variant transition-colors flex items-center justify-center gap-2 uppercase tracking-wide">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                Katalog İndir
+            </button>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="flex-1 lg:ml-64 flex flex-col min-h-screen">
+<!-- Shared Component: TopNavBar -->
+<header class="w-full top-0 sticky bg-surface border-b border-outline-variant shadow-sm z-30">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<!-- Brand / Mobile Menu -->
+<div class="flex items-center gap-sm">
+<button class="lg:hidden p-2 text-on-surface hover:bg-surface-variant rounded transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<a class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight lg:hidden xl:block" href="#">
+                        VOLTA ELECTRIC
+                    </a>
+</div>
+<!-- Center Navigation (Hidden on mobile) -->
+<nav class="hidden md:flex items-center gap-xl h-full">
+<a class="text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 h-full flex items-center px-2 cursor-pointer active:scale-95" href="#">Kurumsal</a>
+<!-- Active State -->
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 hover:bg-surface-container transition-colors duration-200 h-full flex items-center px-2 cursor-pointer active:scale-95" href="#">Kategoriler</a>
+<a class="text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 h-full flex items-center px-2 cursor-pointer active:scale-95" href="#">Katalog</a>
+<a class="text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 h-full flex items-center px-2 cursor-pointer active:scale-95" href="#">İletişim</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-md">
+<!-- Icon Actions -->
+<div class="flex items-center gap-xs">
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant hover:text-primary rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-variant hover:text-primary rounded-full transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+<!-- Trailing CTA -->
+<button class="hidden sm:block bg-secondary text-on-secondary font-button-text text-button-text py-2 px-6 rounded uppercase tracking-wide hover:opacity-90 transition-opacity">
+                        Bize Ulaşın
+                    </button>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<main class="flex-1 p-gutter lg:p-xl max-w-container-max mx-auto w-full flex flex-col gap-lg">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md border-b border-outline-variant pb-md">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="font-label-technical text-label-technical">Kategoriler</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="font-label-technical text-label-technical text-primary font-bold">Bahçe Armatür</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Bahçe Armatür</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">
+                        Açık alanlarınızı güvenli ve estetik bir şekilde aydınlatmak için tasarlanmış, yüksek IP koruma sınıfına sahip endüstriyel kalitede dış mekan aydınlatma çözümleri.
+                    </p>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-lowest border border-outline-variant rounded p-1">
+<span class="pl-3 pr-1 text-on-surface-variant font-label-technical text-label-technical">Sırala:</span>
+<select class="bg-transparent border-none text-primary font-body-sm text-body-sm focus:ring-0 cursor-pointer pr-8 py-2">
+<option>En Yeniler</option>
+<option>Fiyat: Düşük &gt; Yüksek</option>
+<option>Fiyat: Yüksek &gt; Düşük</option>
+<option>IP Sınıfı (Yüksek)</option>
+</select>
+</div>
+</div>
+<!-- Main Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Filters Sidebar (Col Span 3) -->
+<aside class="lg:col-span-3 flex flex-col gap-lg">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<h3 class="font-headline-md text-headline-md text-primary">Filtreler</h3>
+<button class="text-on-surface-variant hover:text-primary font-body-sm text-body-sm underline">Temizle</button>
+</div>
+<!-- Filter Group: Type -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-button-text text-button-text text-on-surface uppercase tracking-wider">TİP</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Bollard (Dikme)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Duvar Tipi</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Solar Enerjili</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Gömme Armatür</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: IP Rating -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-button-text text-button-text text-on-surface uppercase tracking-wider">KORUMA SINIFI (IP)</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface-variant group-hover:text-primary transition-colors">IP44</span>
+<span class="ml-auto text-xs text-outline">(Su Sıçramasına Karşı)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface-variant group-hover:text-primary transition-colors">IP65</span>
+<span class="ml-auto text-xs text-outline">(Tazyikli Suya Karşı)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-label-technical text-label-technical text-on-surface-variant group-hover:text-primary transition-colors">IP67</span>
+<span class="ml-auto text-xs text-outline">(Geçici Daldırma)</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: Color -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-button-text text-button-text text-on-surface uppercase tracking-wider">GÖVDE RENGİ</h4>
+<div class="flex flex-wrap gap-2">
+<button aria-label="Antrasit" class="w-8 h-8 rounded-full border border-outline bg-[#2d3133] focus:ring-2 focus:ring-offset-2 focus:ring-primary"></button>
+<button aria-label="Siyah" class="w-8 h-8 rounded-full border border-outline bg-[#000000] focus:ring-2 focus:ring-offset-2 focus:ring-primary ring-2 ring-offset-2 ring-primary"></button>
+<button aria-label="Beyaz" class="w-8 h-8 rounded-full border border-outline bg-[#ffffff] focus:ring-2 focus:ring-offset-2 focus:ring-primary"></button>
+<button aria-label="Gri" class="w-8 h-8 rounded-full border border-outline bg-[#8b8c89] focus:ring-2 focus:ring-offset-2 focus:ring-primary"></button>
+</div>
+</div>
+<!-- Filter Group: Material -->
+<div class="flex flex-col gap-sm">
+<h4 class="font-button-text text-button-text text-on-surface uppercase tracking-wider">MATERYAL</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Alüminyum Enjeksiyon</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Paslanmaz Çelik</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary/20 bg-surface-container-lowest checked:bg-secondary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Polikarbon</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Product Grid (Col Span 9) -->
+<div class="lg:col-span-9">
+<!-- Grid Container -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-md">
+<!-- Product Card 1 (Hero/Featured Style - spans 2 cols on md) -->
+<div class="md:col-span-2 xl:col-span-2 bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col md:flex-row p-xs group">
+<div class="w-full md:w-1/2 h-64 md:h-full bg-surface-variant rounded-sm relative overflow-hidden flex-shrink-0">
+<div class="absolute top-2 left-2 flex gap-1 z-10">
+<span class="bg-primary text-on-primary font-label-technical text-label-technical px-2 py-1 rounded-sm uppercase">YENİ ÜRÜN</span>
+<span class="bg-surface-container text-on-surface font-label-technical text-label-technical px-2 py-1 rounded-sm border border-outline-variant">IP65</span>
+</div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end, sleek modern architectural garden bollard light. The bollard is made of dark grey matte cast aluminum with precision engineered fins. It is illuminated against a minimalist outdoor concrete wall background during twilight. The lighting is crisp, cool white LED. Professional commercial product photography, B2B aesthetic, extreme detail, high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0W6cU05DamdGoF1I3jT1F6XDpBixy37x9SpKnKGmhRg9xJqkXCVVvV6YZd31_jOtfa20YelHAuAwIQLRduHFovKOrGuNOVALA4eZ02ez70JPNuzYz8SM_jr-JWbUkKWap3AZQv1wWHL6N7Hffb2-I04G0yErswTBgK8-cGXF4eV4_lW-xp36wyuugtKAcgCWw8J3rNsMakxSJspU_syySG6OPDH40Xa02m4cQfmEjsgiVD47q5YqMJI1dv35uX038NTnx1czSj_Tk"/>
+</div>
+<div class="p-md flex flex-col justify-between flex-1">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">V-PRO Serisi Bollard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-3">
+                                        Endüstriyel sınıf alüminyum enjeksiyon gövde. Yüksek verimli SMD LED teknolojisi ile maksimum enerji tasarrufu ve geniş açılı homojen aydınlatma sağlar. Zorlu hava koşullarına tam dayanıklıdır.
+                                    </p>
+<div class="grid grid-cols-2 gap-2 mb-4 bg-surface p-sm rounded border border-outline-variant">
+<div class="flex flex-col">
+<span class="text-xs text-outline uppercase tracking-widest mb-1">Güç</span>
+<span class="font-label-technical text-label-technical text-primary">24W / 36W</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-outline uppercase tracking-widest mb-1">Işık Akısı</span>
+<span class="font-label-technical text-label-technical text-primary">2800 lm</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="text-xs text-outline uppercase tracking-widest mb-1">Renk Sıc.</span>
+<span class="font-label-technical text-label-technical text-primary">3000K / 4000K</span>
+</div>
+<div class="flex flex-col mt-2">
+<span class="text-xs text-outline uppercase tracking-widest mb-1">Gövde</span>
+<span class="font-label-technical text-label-technical text-primary">Antrasit Gri</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-button-text text-button-text py-3 rounded uppercase tracking-wide hover:bg-surface-tint transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    Teknik Döküman İncele
+                                </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-xs flex flex-col hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 group">
+<div class="bg-surface-variant h-56 w-full rounded-sm mb-sm relative overflow-hidden">
+<div class="absolute top-2 left-2 flex gap-1 z-10">
+<span class="bg-surface-container text-on-surface font-label-technical text-label-technical px-2 py-1 rounded-sm border border-outline-variant">IP65</span>
+<span class="bg-secondary/10 text-secondary border border-secondary/20 font-label-technical text-label-technical px-2 py-1 rounded-sm">SOLAR</span>
+</div>
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A modern minimalist solar powered wall-mounted garden light fixture. Matte black finish with a built-in highly reflective photovoltaic panel on top. The light is glowing warmly against a textured slate stone wall. Precision B2B catalog photography, highly detailed, dramatic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMzb1X8_d7PYSkEM3dqi_KnG7KZoOqjfRtiBr1prN1gRaRtcx1W4HBvtuUnHo8iXpYH99OauR65jFM_BCzHfdAmDlophSXJklCjAxw9s75Fu6yXc9ghAM-ERQdD6VrYEXMhqFkiODHEpf7GK6vShQiwYKiEEKm-_epuWx4N9_RX_7OTjrUf_GxWSpt5oCErRV5nsSLvhS_QjiO4PKfE2tFP1l2i0YRataeXaPoPnvbJi99UwSGU7S0fv6NDf_QpO-hw1jxogiPCzzV"/>
+</div>
+<div class="flex-1 flex flex-col">
+<h3 class="font-body-lg text-body-lg text-primary font-semibold mb-1">Helios Solar Duvar Tipi</h3>
+<div class="flex flex-col gap-1 mt-auto">
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/50">
+<span class="font-body-sm text-on-surface-variant">Güç / Batarya</span>
+<span class="font-label-technical text-label-technical">10W / 4000mAh</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/50">
+<span class="font-body-sm text-on-surface-variant">Sensör</span>
+<span class="font-label-technical text-label-technical">PIR Hareket</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-on-surface-variant">Çalışma Süresi</span>
+<span class="font-label-technical text-label-technical">12 Saat</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-xs flex flex-col hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 group">
+<div class="bg-surface-variant h-56 w-full rounded-sm mb-sm relative overflow-hidden">
+<div class="absolute top-2 left-2 flex gap-1 z-10">
+<span class="bg-surface-container text-on-surface font-label-technical text-label-technical px-2 py-1 rounded-sm border border-outline-variant">IP44</span>
+</div>
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A classic yet modernized cylindrical pathway bollard light. Brushed stainless steel finish. Soft diffused white light emitting from the top section. Set against a pure white studio background with subtle soft shadows to emphasize the metallic texture. Professional B2B catalog style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARki-M8RT2kdp9DDWOow-_RvU8RbLY3ueVzy1lwCcct_UiJ-CGuG8lgw6nVkPEhhSYdNFlsGHBIE6WalhgQLKXGwLI8YYHomu5bK4a1OehpPCp48MxSWs3RC_uhzXx3o6AWmKYUUCRtMKKNhcdy3FM4tEVmG2YYKnSS02GeCXN_-C0wLeOc56VHzbE9wHHIobWwZFCPvK8cB64F7blqt_y5BVeof7_fOoU7187VqKcZN0ioWtc-5QPwxeGbKi5qSuTLL89KmO-r1JE"/>
+</div>
+<div class="flex-1 flex flex-col">
+<h3 class="font-body-lg text-body-lg text-primary font-semibold mb-1">Klasik Çelik Bollard</h3>
+<div class="flex flex-col gap-1 mt-auto">
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/50">
+<span class="font-body-sm text-on-surface-variant">Duy Tipi</span>
+<span class="font-label-technical text-label-technical">E27</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/50">
+<span class="font-body-sm text-on-surface-variant">Materyal</span>
+<span class="font-label-technical text-label-technical">304 Paslanmaz</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-on-surface-variant">Yükseklik</span>
+<span class="font-label-technical text-label-technical">80 cm</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-xs flex flex-col hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 group">
+<div class="bg-surface-variant h-56 w-full rounded-sm mb-sm relative overflow-hidden">
+<div class="absolute top-2 left-2 flex gap-1 z-10">
+<span class="bg-surface-container text-on-surface font-label-technical text-label-technical px-2 py-1 rounded-sm border border-outline-variant">IP67</span>
+</div>
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="An industrial grade heavy duty in-ground recessed walk-over light. Thick tempered glass top, heavy aluminum die-cast body. Emitting a powerful narrow beam of light upwards. Shot in a pristine white studio setting. High contrast, precise engineering details visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjssa6LpJ2OypWJGiAJ6FQ2K855L9PQ6wOMugVGtb7n__W3TLv2HmUnTsNPN3ciNXOq3nYoFD_wqDDfMtLButXyC_GZM-nxs-dWfkKO-32b3wZ0Y7p9B7VGp6RsvQzjSEqgIKyPcO0PVcNPiYArqK2z-s5E926KwDc84KcMVfrcXK5i7tuo2uMc8q-9rUrHiO3Ol_b-wtEHyct5k2zFGgUqq5TMtx4gx1e4roMVlijvW_VBpYjpvHdj7z0gsYVQvJ8QdHUfpOEL78_"/>
+</div>
+<div class="flex-1 flex flex-col">
+<h3 class="font-body-lg text-body-lg text-primary font-semibold mb-1">Terra Gömme Zemin Armatürü</h3>
+<div class="flex flex-col gap-1 mt-auto">
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/50">
+<span class="font-body-sm text-on-surface-variant">Güç</span>
+<span class="font-label-technical text-label-technical">12W</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/50">
+<span class="font-body-sm text-on-surface-variant">Yük Dayanımı</span>
+<span class="font-label-technical text-label-technical">2000 kg</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-on-surface-variant">Cam</span>
+<span class="font-label-technical text-label-technical">Temperli</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination (Simplified B2B Style) -->
+<div class="mt-xl border-t border-outline-variant pt-lg flex justify-between items-center">
+<span class="font-label-technical text-label-technical text-on-surface-variant">Gösterilen: 1-4 / Toplam: 24 Ürün</span>
+<div class="flex gap-2">
+<button class="w-10 h-10 border border-outline-variant rounded flex items-center justify-center text-outline-variant cursor-not-allowed bg-surface-container-lowest">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 border border-primary bg-primary text-on-primary rounded font-label-technical text-label-technical flex items-center justify-center">1</button>
+<button class="w-10 h-10 border border-outline-variant bg-surface-container-lowest text-on-surface rounded hover:border-primary transition-colors font-label-technical text-label-technical flex items-center justify-center">2</button>
+<button class="w-10 h-10 border border-outline-variant bg-surface-container-lowest text-on-surface rounded hover:border-primary transition-colors font-label-technical text-label-technical flex items-center justify-center">3</button>
+<span class="w-10 h-10 flex items-center justify-center text-outline-variant">...</span>
+<button class="w-10 h-10 border border-outline-variant rounded flex items-center justify-center text-primary hover:bg-surface-variant transition-colors bg-surface-container-lowest">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="w-full mt-xl bg-surface-container-highest dark:bg-on-primary-fixed border-t border-outline-variant dark:border-outline z-20 relative">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">
+                    VOLTA ELECTRIC
+                </div>
+<div class="flex flex-wrap justify-center gap-md md:gap-lg">
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">KVKK</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Garanti Koşulları</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Teslimat</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">İade Politikası</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                    © 2024 Volta Electric. Tüm hakları saklıdır.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

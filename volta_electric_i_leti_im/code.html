@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>İletişim - Volta Electric</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000000",
+                        "surface-tint": "#565e74",
+                        "on-secondary-fixed": "#341100",
+                        "on-primary-container": "#7c839b",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-surface": "#2d3133",
+                        "surface": "#f7f9fb",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-dim": "#d8dadc",
+                        "secondary": "#9d4300",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#131b2e",
+                        "background": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#76859b",
+                        "secondary-fixed": "#ffdbca",
+                        "on-surface-variant": "#45464d",
+                        "on-surface": "#191c1e",
+                        "outline": "#76777d",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb690",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "tertiary-container": "#0d1c2f",
+                        "primary": "#000000",
+                        "tertiary-fixed": "#d5e3fd",
+                        "outline-variant": "#c6c6cd",
+                        "on-background": "#191c1e",
+                        "surface-container": "#eceef0",
+                        "on-secondary-container": "#5c2400",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fd761a",
+                        "on-secondary-fixed-variant": "#783200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "xl": "64px",
+                        "sm": "16px",
+                        "xs": "8px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "button-text": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-technical": ["13px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "button-text": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Input Glow Focus */
+        .input-glow:focus {
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+            border-color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none z-50">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed cursor-pointer active:scale-95 transition-transform tracking-tight">
+                VOLTA ELECTRIC
+            </div>
+<nav class="hidden md:flex gap-md">
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-sm py-xs rounded cursor-pointer font-button-text text-button-text" href="#">Kurumsal</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-sm py-xs rounded cursor-pointer font-button-text text-button-text" href="#">Kategoriler</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-sm py-xs rounded cursor-pointer font-button-text text-button-text" href="#">Katalog</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1 px-sm py-xs cursor-pointer font-button-text text-button-text" href="#">İletişim</a>
+</nav>
+<div class="flex items-center gap-sm">
+<div class="hidden md:flex gap-xs text-primary dark:text-primary-fixed">
+<button class="p-xs hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 rounded cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-xs hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 rounded cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary font-button-text text-button-text px-md py-xs rounded uppercase hover:opacity-90 active:scale-95 transition-all">
+                    Bize Ulaşın
+                </button>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden p-xs text-primary dark:text-primary-fixed cursor-pointer">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-gutter py-xl">
+<!-- Header Section -->
+<section class="mb-xl text-center md:text-left border-b border-outline-variant pb-lg">
+<h1 class="font-display-lg text-display-lg text-primary mb-xs md:hidden font-headline-lg-mobile text-headline-lg-mobile">İletişim Merkezİ</h1>
+<h1 class="font-display-lg text-display-lg text-primary mb-xs hidden md:block">İletişim Merkezi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Teknik destek, kurumsal satın alma veya genel sorularınız için uzman mühendis ekibimizle iletişime geçin.
+            </p>
+</section>
+<!-- Content Grid (Bento Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-md items-start">
+<!-- Contact Information Panel (Left/Top) -->
+<div class="lg:col-span-4 flex flex-col gap-md">
+<!-- Direct Contact Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-md hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-shadow duration-300">
+<div class="flex items-center gap-sm mb-md pb-xs border-b border-surface-container">
+<span class="material-symbols-outlined text-primary" data-icon="support_agent">support_agent</span>
+<h2 class="font-headline-md text-headline-md text-primary">Destek Hattı</h2>
+</div>
+<ul class="flex flex-col gap-sm">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="call">call</span>
+<div>
+<span class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-[2px]">Müşteri Hizmetleri</span>
+<a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors" href="tel:+908501234567">+90 850 123 45 67</a>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="mail">mail</span>
+<div>
+<span class="block font-label-technical text-label-technical text-on-surface-variant uppercase mb-[2px]">E-Posta</span>
+<a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors" href="mailto:info@voltaelectric.com.tr">info@voltaelectric.com.tr</a>
+</div>
+</li>
+</ul>
+</div>
+<!-- HQ Address Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-md hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-shadow duration-300">
+<div class="flex items-center gap-sm mb-md pb-xs border-b border-surface-container">
+<span class="material-symbols-outlined text-primary" data-icon="corporate_fare">corporate_fare</span>
+<h2 class="font-headline-md text-headline-md text-primary">Merkez Ofis</h2>
+</div>
+<div class="flex items-start gap-sm mb-md">
+<span class="material-symbols-outlined text-on-surface-variant mt-1" data-icon="location_on">location_on</span>
+<div>
+<address class="not-italic font-body-md text-body-md text-on-surface mb-xs">
+                                Organize Sanayi Bölgesi<br/>
+                                Elektrikçiler Cad. No: 42<br/>
+                                34775 Ümraniye, İstanbul
+                            </address>
+<span class="inline-block px-xs py-[2px] bg-surface-container text-on-surface-variant font-label-technical text-label-technical rounded-sm">
+                                TR-IST-HQ-01
+                            </span>
+</div>
+</div>
+<!-- Map Image Area -->
+<div class="w-full h-48 bg-surface-container-low rounded border border-outline-variant relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A highly detailed, precise satellite map view of an industrial park in Istanbul, Turkey. The aesthetic is clean, modern, and slightly desaturated with subtle technical grid overlays indicating coordinates. The lighting is neutral daylight, emphasizing structured corporate buildings and road networks in a professional corporate context." data-location="Istanbul, Turkey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoF7JJYfkWinu_oplcbrIs7Dk_GYF0WlME-ZJFvYrvv1TVQzGjVAcnT41rlKP93j5d63ataPNqiwNK1lLvaGUjEC5IWnz860tSKq68klUjIUcHw3LEUwn-Zeh_d6zowVKG0BPrn2zuN2EsBe038JtQ8EvCx0O6RhyXVz7ePh9OZnR0-0nfLCIj85M21-RYZCFO9Q6mW4s_Ly6Mn9VC4wKKIKWEB-rKhZ6PNaBPjUTmwUXF-gqElfYau9Saj1OT42HS-QqZEFfYJKMo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+<button class="absolute bottom-sm right-sm bg-surface-container-lowest border border-outline-variant text-primary font-button-text text-button-text px-sm py-[4px] rounded flex items-center gap-[4px] hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="directions">directions</span>
+                            Yol Tarifi
+                        </button>
+</div>
+</div>
+</div>
+<!-- Contact Form Panel (Right/Bottom) -->
+<div class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-lg p-lg hover:shadow-[0_4px_12px_rgba(15,23,42,0.08)] transition-shadow duration-300">
+<div class="mb-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Talep Formu</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lütfen teknik veya ticari taleplerinizi aşağıdaki form aracılığıyla detaylandırın.</p>
+</div>
+<form action="#" class="flex flex-col gap-md" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Name -->
+<div class="flex flex-col gap-xs">
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="name">Ad Soyad / Firma Ünvanı *</label>
+<input class="bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md rounded px-sm py-[10px] outline-none input-glow transition-all" id="name" name="name" required="" type="text"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-xs">
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="email">E-Posta Adresi *</label>
+<input class="bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md rounded px-sm py-[10px] outline-none input-glow transition-all" id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<!-- Subject / Category -->
+<div class="flex flex-col gap-xs">
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="subject">Konu / Kategori *</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md rounded px-sm py-[10px] outline-none input-glow transition-all appearance-none cursor-pointer" id="subject" name="subject" required="">
+<option disabled="" selected="" value="">Lütfen bir kategori seçin</option>
+<option value="technical">Teknik Destek / Ürün Bilgisi</option>
+<option value="sales">Kurumsal Satış / Teklif Talebi</option>
+<option value="distributor">Distribütörlük Başvurusu</option>
+<option value="other">Diğer</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- Message -->
+<div class="flex flex-col gap-xs">
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="message">Mesajınız *</label>
+<textarea class="bg-surface-container-lowest border border-outline-variant text-on-surface font-body-md text-body-md rounded px-sm py-[10px] outline-none input-glow transition-all resize-y" id="message" name="message" required="" rows="5"></textarea>
+</div>
+<!-- Consent -->
+<div class="flex items-start gap-sm mt-xs">
+<input class="mt-[2px] w-4 h-4 rounded-sm border-outline-variant text-secondary focus:ring-secondary focus:ring-offset-0 bg-surface-container-lowest cursor-pointer" id="consent" name="consent" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="consent">
+                            Kişisel verilerimin <a class="text-primary underline hover:text-secondary transition-colors" href="#">KVKK Aydınlatma Metni</a> kapsamında işlenmesini onaylıyorum.
+                        </label>
+</div>
+<!-- Submit Action -->
+<div class="mt-sm flex justify-end">
+<button class="bg-secondary text-on-secondary font-button-text text-button-text px-lg py-[12px] rounded uppercase flex items-center gap-xs hover:bg-[#b84f00] active:scale-95 transition-all w-full md:w-auto justify-center" type="submit">
+<span>Gönder</span>
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-primary-fixed text-primary dark:text-primary-fixed w-full mt-xl border-t border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md font-bold tracking-tight">
+                VOLTA ELECTRIC
+            </div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">KVKK</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Garanti Koşulları</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Teslimat</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">İade Politikası</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant">
+                © 2024 Volta Electric. Tüm hakları saklıdır.
+            </div>
+</div>
+</footer>
+</body></html>

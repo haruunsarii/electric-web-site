@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOLTA ELECTRIC - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#7c839b",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "surface-dim": "#d8dadc",
+                    "on-tertiary-container": "#76859b",
+                    "surface-container": "#eceef0",
+                    "outline": "#76777d",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-variant": "#e0e3e5",
+                    "surface-bright": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#3a485c",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary-fixed": "#d5e3fd",
+                    "secondary-fixed-dim": "#ffb690",
+                    "surface": "#f7f9fb",
+                    "on-surface": "#191c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "on-tertiary-fixed": "#0d1c2f",
+                    "tertiary-container": "#0d1c2f",
+                    "primary-fixed": "#dae2fd",
+                    "outline-variant": "#c6c6cd",
+                    "on-secondary-container": "#5c2400",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdbca",
+                    "secondary-container": "#fd761a",
+                    "surface-container-low": "#f2f4f6",
+                    "background": "#f7f9fb",
+                    "surface-tint": "#565e74",
+                    "inverse-primary": "#bec6e0",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed": "#341100",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#bec6e0",
+                    "primary": "#000000",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary": "#000000",
+                    "tertiary-fixed-dim": "#b9c7e0",
+                    "on-secondary-fixed-variant": "#783200",
+                    "secondary": "#9d4300",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#131b2e",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "xs": "8px",
+                    "sm": "16px",
+                    "base": "4px",
+                    "gutter": "24px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "button-text": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-technical": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-technical": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bento-card:hover .bento-overlay {
+            opacity: 1;
+        }
+        .bento-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none z-50">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">
+                VOLTA ELECTRIC
+            </div>
+<div class="hidden md:flex gap-md items-center">
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 cursor-pointer active:scale-95 transition-transform px-xs py-base rounded" href="#">Kurumsal</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 cursor-pointer active:scale-95 transition-transform px-xs py-base rounded" href="#kategoriler">Kategoriler</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 cursor-pointer active:scale-95 transition-transform px-xs py-base rounded" href="#">Katalog</a>
+<a class="font-button-text text-button-text text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 cursor-pointer active:scale-95 transition-transform px-xs py-base rounded" href="#">İletişim</a>
+</div>
+<div class="flex items-center gap-sm">
+<div class="hidden sm:flex gap-xs">
+<button class="text-on-surface-variant hover:text-primary p-xs rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary p-xs rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+<button class="bg-secondary text-on-secondary font-button-text text-button-text px-sm py-xs rounded hover:bg-secondary-container transition-colors shadow-sm uppercase">
+                    Bize Ulaşın
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full min-h-[819px] flex items-center justify-center overflow-hidden fade-in">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-40" data-alt="A modern industrial facility interior with pristine white walls, sleek metallic electrical panels, and subtle high-key lighting. The atmosphere is highly technical, professional, and clean, conveying reliability and precision in electrical engineering. The color palette emphasizes whites, cool grays, and deep blacks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZYNVKEu4Nj9Lr4kRAMDL4W5cNbLP4hDqI_qTILjg18wgQ-0KKK7O0c6hOqUJpSiSGThi4isQGnQYm-_yOaAfP63-VDUnWTUjarK0lL8TJYLumpAfkVg3znAgqENmdz13YIldenzvzhJDcnonce3_taNRHvWxzS53biAE3YoSJBwbVbKMNA5ZmHkkPJBb-1cC5xzcXnQHu7pMeaSyGlw-TGHui2lNLeUzO1xSaEvQPzzoKYvdNZze9Ryxp3vCutqsJe0t9kS00-kD2')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/80 to-background"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter text-center flex flex-col items-center gap-md">
+<span class="font-label-technical text-label-technical text-on-surface-variant bg-surface-container px-xs py-base rounded-sm uppercase tracking-widest border border-outline-variant">Endüstriyel Çözümler</span>
+<h1 class="font-display-lg text-display-lg text-primary max-w-3xl leading-tight">
+                Yüksek Kaliteli Elektrik ve Aydınlatma Çözümleri
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-sm">
+                Profesyonel projeleriniz için güvenilir, uzun ömürlü ve yüksek performanslı endüstriyel ekipmanlar. Mühendislik ve mimari ihtiyaçlarınız için tasarlandı.
+            </p>
+<div class="flex gap-sm mt-md">
+<a class="bg-primary text-on-primary font-button-text text-button-text px-lg py-sm rounded hover:bg-primary-container transition-colors uppercase shadow-sm border border-transparent" href="#kategoriler">Ürünleri İncele</a>
+<a class="bg-transparent text-primary font-button-text text-button-text px-lg py-sm rounded hover:bg-surface-container transition-colors uppercase border border-primary flex items-center gap-xs" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+                    Katalog İndir
+                </a>
+</div>
+</div>
+</header>
+<!-- Categories / Bento Grid -->
+<section class="max-w-container-max mx-auto px-gutter py-xl fade-in" id="kategoriler">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-sm">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xs">Kategoriler</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tüm endüstriyel ve ticari ihtiyaçlarınız için geniş ürün yelpazesi.</p>
+</div>
+<a class="font-button-text text-button-text text-secondary hover:underline flex items-center gap-base" href="#">
+                Tümünü Gör <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-sm auto-rows-[240px]">
+<!-- Ampul (Bulbs) -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 md:col-span-2 row-span-2 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-80 group-hover:scale-105" data-alt="A highly detailed, macro shot of a modern, energy-efficient LED light bulb resting on a clean, technical blueprint. Soft, sterile studio lighting highlights the bulb's glass and metallic components. The color scheme is predominantly cool whites and soft greys, emphasizing innovation and efficiency." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDORtBX0hjkTdSD1E70tbmQ6LFD7vvDvH5iH9IVzXSam8tByB4Pa5ugl6jgOpSX2VF6KQ2DYSOxUu7EgByncWS3gVUmTmEZb6hy3GHhK7BOcdHmiOqtadvVdf3aw4OZ-HGRqhLlTe56nqC2hiNHmkav51cOUDBkspfkw-Fc29GgPaq0Fjg5pxHiwStL9k-L8Ka0CRMMdMOO_z61OYUQ0n-CukXpcLjhIC1xBPkllhMRtRYou5l3AeHiQIXNj2lIG0pYivVItKWLg6gn')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-md w-full">
+<div class="flex items-center gap-xs mb-xs text-on-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+<h3 class="font-headline-md text-headline-md">Ampul</h3>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-highest opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Enerji tasarruflu LED çözümleri ve endüstriyel aydınlatma.</p>
+</div>
+</div>
+<!-- Led Paneller -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 row-span-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-60 group-hover:scale-105" data-alt="A sleek, flat LED panel light installed on a pristine white office ceiling. The light is on, emitting a bright, even, glare-free white glow. The surrounding ceiling tiles are perfectly aligned, showcasing a professional, high-end commercial interior design style. Minimalist and technical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoZYNDuKqcRm_48-gIUVLRPvbCNpBXm7nhpdNtZ9uC5GIWTH7vaQ2yEZ5_SjF9is2w_TeVLLI2fl61u5fpXNHBp9WiXfxv-7ajnR54LreOV7t9fuyDmCZmWpTLJYhN64AWdBbm7gaoWzGch8bUwD7QyxpnRVrm6FvmSWCajbswDmCZWGxp0UrfYtPrXRypXxwZmmDmw4HeoTePAXjbThj-lhVx-mhPryblKYv4jhZ-9P9-zWkB_yrQufDTocnAQ7x08999YoQZsHz-')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-sm w-full">
+<div class="flex items-center gap-xs text-primary mb-base">
+<span class="material-symbols-outlined">grid_view</span>
+<h3 class="font-button-text text-button-text">Led Paneller</h3>
+</div>
+</div>
+</div>
+<!-- Ziller -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 row-span-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-60 group-hover:scale-105" data-alt="A modern, metallic industrial bell or intercom system mounted on a smooth concrete wall. The design is robust and professional, featuring brushed steel textures and clear, functional details. The lighting is crisp and even, highlighting the build quality of the equipment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwau-kczWViq4Wss6lHmRPOZAGy744CKr9CYh2ZTxkSVmUgEW-t4dpWoYjvUomy1HFInt_jtIdaYGNmTY-wVRfT0dB0HfGzzCMFTx5s59k926rD1dEgdQ5jyknALDj5vCrxCNtG-PvzUC1Nw7zaJNgMkkOTj67SF0E3YzsjMttKPAMHsBJqsL3kBfSdkVTuLNrSM2Q5vQExHT4valGMaF7V3FpJfIba9-mamhwdewyZtqOHRkek3z-As3dhztluKq4Lp4VHMUuvV-E')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-sm w-full">
+<div class="flex items-center gap-xs text-primary mb-base">
+<span class="material-symbols-outlined">notifications_active</span>
+<h3 class="font-button-text text-button-text">Ziller</h3>
+</div>
+</div>
+</div>
+<!-- Sigortalar -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 md:col-span-2 row-span-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-60 group-hover:scale-105" data-alt="Close-up of an impeccably organized electrical breaker box with neatly arranged fuses and wiring. The labels are precise, and the components are modern plastic and metal. Shot with a shallow depth of field, focusing on the precision of the installation in a high-tech facility." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBneKAH9F9FSfzr-qUYJMadtx8-aHL_KWvoT0vu6Xe4imINgN3NGJqcqlzQQDZV6V_GGH23AvJ1xzRXhQMzIHDeaMfzf4ABlZJPoDdzXFTlGkrjzHlr882jV_rdazoD5oBgaYUwcIlm63VPzCTrbGX59uOZszh55C1_Z1_iA8k0V1W68nrK0fQ_4b-ehVX5MUD3T8GGaImGGvJBz4jlMxazU1H82JEbZU5DB1p_3f2_ZUUuHHCAQXl8xCiICMVvpkRgp0JCCuzl039I')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-sm w-full">
+<div class="flex items-center gap-xs text-primary mb-base">
+<span class="material-symbols-outlined">settings_input_component</span>
+<h3 class="font-button-text text-button-text">Sigortalar</h3>
+</div>
+</div>
+</div>
+<!-- Bant Armatür -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 row-span-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-60 group-hover:scale-105" data-alt="Long, sleek linear LED light fixtures illuminating a modern warehouse or laboratory corridor. The perspective emphasizes the clean lines and continuous light output. The aesthetic is stark, highly functional, and uses a monochromatic color palette with bright white illumination." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCk9LUoT2zMA-Q_q8RpzU-crEE-0MOG5j_Zd8zPSYh7pTX8FdMyXypioCHkHIZiWWfPmnNlUQGUIP_LazNbiEGULeTGYlo2W27e0QlSY2-Tq_j1-6HQdBfSt8-Xxs8wG8SVXMbZfDjqZd3khNFBF-nrZjIpPTgy2RwjLrm2nTLk5qOMA7IOasyRZP-s4w3FKUpjq3V-fdY_I4QhuSOWEp13lh7Vm7VQkTFtr6Pq4eSAKS1cH8UZmIpCI600cxwCTGEXNH2uBiC1pcuL')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-sm w-full">
+<div class="flex items-center gap-xs text-primary mb-base">
+<span class="material-symbols-outlined">linear_scale</span>
+<h3 class="font-button-text text-button-text">Bant Armatür</h3>
+</div>
+</div>
+</div>
+<!-- Bahçe Armatür -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 row-span-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-60 group-hover:scale-105" data-alt="A durable, contemporary outdoor garden light fixture casting a precise beam onto a paved walkway next to minimalist landscaping. The scene is shot during dusk, showing the fixture's resilience and aesthetic integration into modern outdoor architectural environments." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3Cg39qq4cmqVSioZFH7tczKhS3K8XJ_rh0vBAo8EEbh3reBFpb-VxFDcPUkxI_hnHTh00W93PzSHLgIVyG2koJY7g9ZT-XgJPOYqTx5cb1wagZJ6OaKol8rCyt_0RPUd5WtjQeGViy3HcHO17q42P2p5v1d_yBdNWwanPlsonCdc-qdsn7Vmw3vv_hQhvv2ylK6aWrDWdGG0QDhXrwd7Trg3IdJ01cenuautO9L682r738qXWkND4Tua3bmqqikCxhWM6jrZye_uV')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-sm w-full">
+<div class="flex items-center gap-xs text-primary mb-base">
+<span class="material-symbols-outlined">yard</span>
+<h3 class="font-button-text text-button-text">Bahçe Armatür</h3>
+</div>
+</div>
+</div>
+<!-- Projektör -->
+<div class="bento-card group relative overflow-hidden rounded-lg border border-outline-variant bg-surface cursor-pointer col-span-1 md:col-span-2 row-span-1 shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out opacity-60 group-hover:scale-105" data-alt="A heavy-duty industrial LED floodlight or projector mounted on a steel girder. The fixture is rugged, featuring prominent heat sinks and a thick glass lens. The lighting is dramatic, emphasizing the power and wide-area coverage capabilities of the equipment in a vast commercial space." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaaj6azpfsTsOjN0H6WDLjOlIhP3MKZ4vDBUUKqru5BFX3p2qQzj0y7SZZ-3kYX5DZ0PF58h7aGgnpxoJC0SSvu4LvfJHTwNMMgMA4Xm-ibwNqT5DXzh56JEsHODE1XmXOaEA10-Uqhv7XX-GMdn29NJm4jnWEv6_0ecSTqTGzdFbnnxu0jLpV8511e-bY_uxRo-P0ptatr_lR34hoVFCWA0Rk9KcJfp005Ca9P3CrnFIEWJM5uwWpRx4YeBTScBbc1_ePVvklUydT')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-sm w-full">
+<div class="flex items-center gap-xs text-primary mb-base">
+<span class="material-symbols-outlined">flashlight_on</span>
+<h3 class="font-button-text text-button-text">Projektör</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-primary-fixed w-full mt-xl border-t border-outline-variant dark:border-outline fade-in">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">
+                VOLTA ELECTRIC
+            </div>
+<div class="flex flex-wrap gap-md justify-center">
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">KVKK</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Garanti Koşulları</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Teslimat</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">İade Politikası</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                © 2024 Volta Electric. Tüm hakları saklıdır.
+            </div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

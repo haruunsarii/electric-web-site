@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ampul Kategorisi - Volta Electric</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#bec6e0",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "primary": "#000000",
+                        "inverse-surface": "#2d3133",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-bright": "#f7f9fb",
+                        "on-secondary-fixed": "#341100",
+                        "surface-container": "#eceef0",
+                        "surface-tint": "#565e74",
+                        "surface-container-highest": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-background": "#191c1e",
+                        "on-secondary-container": "#5c2400",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "on-error": "#ffffff",
+                        "tertiary": "#000000",
+                        "secondary-container": "#fd761a",
+                        "tertiary-fixed": "#d5e3fd",
+                        "primary-fixed": "#dae2fd",
+                        "on-primary-fixed": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#783200",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-container": "#76859b",
+                        "secondary": "#9d4300",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c6c6cd",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "outline": "#76777d",
+                        "on-surface-variant": "#45464d",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "background": "#f7f9fb",
+                        "tertiary-container": "#0d1c2f"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        xl: "64px",
+                        lg: "40px",
+                        "container-max": "1280px",
+                        sm: "16px",
+                        gutter: "24px",
+                        md: "24px",
+                        xs: "8px",
+                        base: "4px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Inter"],
+                        "label-technical": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "button-text": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        "label-technical": ["13px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "button-text": ["14px", { lineHeight: "20px", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for sidebar */
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #c6c6cd; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<header class="w-full top-0 sticky bg-surface border-b border-outline-variant shadow-sm z-50">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-md">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">VOLTA ELECTRIC</a>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Kurumsal</a>
+<a class="font-button-text text-button-text text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Kategoriler</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Katalog</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">İletişim</a>
+</nav>
+<div class="flex items-center gap-md">
+<div class="hidden lg:flex items-center bg-surface-container-lowest border border-outline-variant rounded px-sm py-xs focus-within:border-primary focus-within:ring-2 focus-within:ring-primary-fixed transition-all">
+<input class="bg-transparent border-none focus:ring-0 text-body-sm font-body-sm w-48 text-on-surface placeholder:text-on-surface-variant outline-none" placeholder="Ürün ara..." type="text"/>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">search</span>
+</div>
+<button class="font-button-text text-button-text bg-secondary text-on-secondary rounded px-md py-xs h-10 hover:opacity-90 transition-opacity active:scale-95">
+                    Bize Ulaşın
+                </button>
+<div class="flex gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-container-max mx-auto px-gutter py-lg w-full flex flex-col md:flex-row gap-lg">
+<aside class="w-full md:w-64 flex-shrink-0 flex flex-col gap-lg">
+<div class="bg-surface-container-low rounded-lg p-md border border-outline-variant">
+<div class="mb-md">
+<h2 class="font-headline-md text-headline-md text-primary">Kategoriler</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Endüstriyel Çözümler</p>
+</div>
+<nav class="flex flex-col gap-xs">
+<a class="bg-primary-container text-on-primary-container font-semibold rounded-lg flex items-center gap-xs px-sm py-xs font-body-md text-body-md transition-all duration-300" href="#">
+<span class="material-symbols-outlined">lightbulb</span> Ampul
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-xs px-sm py-xs font-body-md text-body-md rounded-lg hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">grid_view</span> Led Paneller
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-xs px-sm py-xs font-body-md text-body-md rounded-lg hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">notifications_active</span> Ziller
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-xs px-sm py-xs font-body-md text-body-md rounded-lg hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings_input_component</span> Sigortalar
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-xs px-sm py-xs font-body-md text-body-md rounded-lg hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">linear_scale</span> Bant Armatür
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-xs px-sm py-xs font-body-md text-body-md rounded-lg hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">yard</span> Bahçe Armatür
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant flex items-center gap-xs px-sm py-xs font-body-md text-body-md rounded-lg hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">flashlight_on</span> Projektör
+                    </a>
+</nav>
+<button class="mt-md w-full bg-primary text-on-primary font-button-text text-button-text py-xs rounded flex items-center justify-center gap-xs hover:bg-inverse-surface transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Katalog İndir
+                </button>
+</div>
+<div class="flex flex-col gap-md">
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface border-b border-outline-variant pb-xs">Filtreler</h3>
+<div class="flex flex-col gap-sm">
+<h4 class="font-body-md text-body-md font-medium text-on-surface">Marka</h4>
+<div class="flex flex-col gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> Volta Premium</label>
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> Osram</label>
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> Philips</label>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-body-md text-body-md font-medium text-on-surface">Güç (Watt)</h4>
+<div class="flex flex-col gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> 5W - 10W</label>
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> 11W - 20W</label>
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> 21W+</label>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-body-md text-body-md font-medium text-on-surface">Renk Sıcaklığı</h4>
+<div class="flex flex-col gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> 2700K (Sarı)</label>
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> 4000K (Gün Işığı)</label>
+<label class="flex items-center gap-xs cursor-pointer"><input class="rounded-sm border-outline-variant text-primary focus:ring-primary" type="checkbox"/> 6500K (Beyaz)</label>
+</div>
+</div>
+</div>
+</aside>
+<section class="flex-1 flex flex-col gap-md">
+<nav class="flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Anasayfa</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Kategoriler</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface font-medium">Ampul</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-sm border-b border-outline-variant pb-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Ampul Kategorisi</h1>
+<div class="flex items-center gap-xs font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Sırala:</span>
+<select class="bg-surface-container-lowest border border-outline-variant rounded px-sm py-xs text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer">
+<option>En Yeniler</option>
+<option>Fiyat: Düşükten Yükseğe</option>
+<option>Fiyat: Yüksekten Düşüğe</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md">
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="absolute top-xs left-xs bg-surface-container-high px-xs py-base rounded-sm font-label-technical text-label-technical text-on-surface z-10">Stokta</div>
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Professional studio shot of a standard white LED lightbulb against a pristine white background. The lighting is high-key and industrial, highlighting the smooth matte texture of the bulb's diffuser and the precise metallic threading of the E27 base. Crisp shadows, clean corporate aesthetic, extremely sharp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa3s4wFXVnZuKcrf5zzPeYFgpxqQlfJudGuTYfC91YP_zffsU99_r7cuv8CeEcwPk8BLRJQ8QDLxicw7jhMPSoaYgQkbx1dyG8Zxio0_3KTkA4x2TTq7_Q3JM2MtOM_d_o2bqTzoxijnf7jgq0b4-mmyKEv6ep_dmhCv8kauna4GHttwb_vTYCzNi1Kkj6dKJdY5YpcjMHFP94QMyBevwpGsawhlzecB3ix0FY-VdEhbTJFVKtqIPmZqLOhSqJvzlWeAkIAuL_qdb0"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Volta Premium</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">LED Ampul E27 Standard</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 9W</div>
+<div>Renk: 4000K</div>
+<div>Lümen: 806lm</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺45,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="absolute top-xs left-xs bg-secondary text-on-secondary px-xs py-base rounded-sm font-label-technical text-label-technical z-10">Yeni</div>
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="High-resolution product photo of a vintage-style LED filament bulb. Warm amber glass housing with intricate glowing orange filaments visible inside. E27 brass base. Shot against a solid light grey background with professional studio lighting highlighting the glass reflections. Industrial, premium electrical component aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkyq3h-Rcs3IS8ABFG_oh1DnDeg4iPO4UZTEHdEeTIALfKvPt6NZ3heGoz-lfgo2lzqTvUEj_-H52QBvD2FnRxEjSnW-KwZBYtm2cfLu4TVQfABUzRNM3v3dZ0XPed7hQmlOmNzv_D4-zpKhByOCchW6gdw3vK8_mLz7bcaPBjrHsB30-nfmZfuaLW3F9vxAt5ozNmbbTbrVvqlcGFT67l3JcqBFiHWfRDniyUO5byNclFWQP8yzRVyg3PAFDAhXIp8Q0n5rigMCD3"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Osram</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Vintage Filament LED Ampul</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 7W</div>
+<div>Renk: 2700K</div>
+<div>Lümen: 720lm</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺85,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Clean B2B catalog image of a heavy-duty industrial high-bay corn LED bulb. Cylindrical shape with multiple visible yellow LED diodes arranged in rows. Thick aluminum heat sink and robust E40 screw base. Shot against a bright white background, evenly lit, highly technical and detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL6YW4eLxftsu4Rq7jr0PURnUVwvyvMnSkZz2zqgB40LRBfbnNEXU_8eozEDt3lpNBDU4XAC7sYDhcfl-x3ac5pcqw25IIO_DrrEWcXLq9xbTBeu_8Ybl3XYOn3g2Xt8X7PtzW_xKmPoqVpC6FspVqr97JyQ_oGLs13W7EPkyzcutand5N4OnufNQLTYDcjZ4L0r9n2HAOqZQ1oz0z8QPPCAbZupVrqRWnaIqXHQHwqk1r4ujM3GYNEqdPpyX55UcqNFWYep3zlWXC"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Volta Pro</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Yüksek Güçlü Corn LED E40</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 50W</div>
+<div>Renk: 6500K</div>
+<div>Lümen: 5000lm</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺320,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Macro photography of a GU10 LED spotlight bulb. Silver metallic ridged heat sink body with a multifaceted clear lens on top. Bi-pin base clearly visible. High contrast lighting emphasizing the technical engineering of the product against a sterile white background. Corporate industrial catalog style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWHY7amp8GT4eJWeOpwZ29P-XOd6WJZzs4HD-yxMM9ge4ls4B9Waimd_FhzGJzm-XPX45NW06hcovPfVpLnDbFI07pEupzEemBqxuKGUsj5evTYLpEzwKJdTng98Ch2gz-W8KxnlXyfXr2GgE-a3Q0IgpQvRR939RhemvDQg_gZ2xicR_ykAPLXksG-ZXeGqQZ-Ophk_isKRn3wD4kRWJZrJ2fqWTj8RZqBYCRdLQneHcWOY7hoc94IWVhh72pin5cYiebIWNqwRWb"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Philips</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Spot LED GU10 Master</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 5W</div>
+<div>Açı: 36°</div>
+<div>Lümen: 390lm</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺115,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Elegant product shot of an LED candle bulb with an E14 base. Slender, flame-shaped frosted white glass diffuser. The metallic screw base is crisp and detailed. Isolated on a light grey background with soft, technical lighting. Professional B2B catalog imagery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Ad3YVPti4ZKNfBcd5X8vYAC6khVTTiMCmv28iy3YFO2k9z1TpmYNVjbqmK5BVIBOqf11y7pCMp5Y3Gnk-yhAT1M1Nky13cguU9C7neBV2b8TgFVJzhquOttjn1t-4k47e-gFPWrL3LFmXNYN6-8KH7nkgt42uygoZpYlxAH1U05l5b2c18L7hpMSI91pPEQ52_8dbgGxTIHW2JpupgL4eS6BSgYTlZkdx_aNT7uKRP5F0QxTOettrtMO5oGz2AD0cK0I82XbnWSX"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Volta Premium</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Buji LED Ampul E14</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 4W</div>
+<div>Renk: 4000K</div>
+<div>Lümen: 400lm</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺35,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="High-quality industrial photography of a large Globe LED bulb (G95). Spherically shaped white opaque glass shell with a standard E27 aluminum base. Studio lighting creating smooth gradients on the sphere surface against a sterile white background. Clean, modern, technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0-7YYKwU6vjoue1mYCOIQYRGMHCtH3xZ1-pWFtxFe7m-XuG4ywSlZrzTRKhGI7KxG3QmF3lyoF2j34FY2-0UFMwsZFh0kbs080waixN-IiKmXtNZWayiF9oysxx3EhEiHcCKoNs28aYrvmKA7Dqs8whD13u0tp4aBDW7gglrSgLpiOD0XAOweW241QPW_3xSjI2Vsko1sk-VWJq87AULOC7f4GlIP1DvMe6UjifKLkhc8dwyVCcvCH0CqIsJndqNpKWUEDaNIREeU"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Osram</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Globe G95 LED Ampul</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 12W</div>
+<div>Renk: 2700K</div>
+<div>Lümen: 1055lm</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺140,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Detailed technical product image of a smart RGB LED lightbulb. Looks like a standard A60 bulb but with a sleek, minimalist modern design, perhaps subtle grey banding near the base. Isolated on a light backdrop. Focus on precision manufacturing and clean lines, suitable for an engineer's procurement catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQRDdEOFnNlw26PwJABnTZ7J1qeS4yFHxI6bx5zezKcoRTVIvwazX8vt_h7xgTNj4M6cdK1HdmpaZNv26tBbMeMjoQ2jvXUeK6m6AC3bYa2uBa3lgjeXLMbE5rranVzBOPuEr82OCKpUB1j95NKQD7S8elE1vCiNM3OZxlGlr0wdruRO3684cDldzAcFbQdMszQz0O9IsRdPnUqZX2U_qm-vemAtYyryKkxHxV3ne_GwJB_V_ETvHsvp3OnYlRmW2u9jKjkOZq5pIF"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Philips</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Akıllı Wi-Fi RGB Ampul</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 9W</div>
+<div>Özellik: RGB+W</div>
+<div>Bağlantı: Wi-Fi</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺450,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded hover:shadow-[0px_4px_12px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col group relative">
+<div class="h-48 bg-[#F1F5F9] rounded-t flex items-center justify-center p-md overflow-hidden relative">
+<img class="object-contain w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="Studio shot of an industrial LED capsule bulb with a G9 base. Tiny, highly detailed electronic components and yellow LED arrays encapsulated in clear silicone. Extreme macro photography, sharp focus, professional lighting, conveying high technology and reliability for a B2B audience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQhPhDV0mCMt-4MIC_CoPiaifOF6Iv82tJhKVTbVWl3vNvwveRfaZoib3Bd9VTisTCop0jLpsTpJxwg_N-vpgQFNpE9mCb9pm1jiQAIB2jlYsBOw2y_chjITC1_30mpg1zWPkhO45v_gL4kr-2e1a0g30sLSmC-f3Qf11eJf6K4VovR51U4M8B4tlf-IJpQTiYPW_KRBtAzmFSbAUS0N5aSJGoVv0SBoGif5Z1aFEx9REXzZesf2YZWzt5mjR5u1RScbZbRZLstb0D"/>
+</div>
+<div class="p-sm flex flex-col flex-1 gap-sm">
+<div class="flex flex-col gap-base flex-1">
+<span class="font-label-technical text-label-technical text-on-surface-variant uppercase">Volta Pro</span>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Kapsül LED G9</h3>
+<div class="mt-xs grid grid-cols-2 gap-xs font-label-technical text-label-technical text-on-surface-variant">
+<div>Güç: 3W</div>
+<div>Renk: 4000K</div>
+<div>Boyut: Mini</div>
+</div>
+</div>
+<div class="flex items-end justify-between mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-headline-md text-headline-md text-primary">₺28,00</span>
+<button class="w-10 h-10 rounded border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-md">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full mt-xl border-t border-outline-variant bg-surface-container-highest text-primary font-body-sm text-body-sm">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md text-primary font-bold">VOLTA ELECTRIC</div>
+<div class="flex flex-wrap items-center justify-center gap-md">
+<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">KVKK</a>
+<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Garanti Koşulları</a>
+<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Teslimat</a>
+<a class="text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">İade Politikası</a>
+</div>
+<div class="text-on-surface-variant">
+                © 2024 Volta Electric. Tüm hakları saklıdır.
+            </div>
+</div>
+</footer>
+</body></html>

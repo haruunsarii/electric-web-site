@@ -1,0 +1,33 @@
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "default"
+package = "@netlify/plugin-nextjs"
+
+[plugins.inputs]
+
+[build]
+publish = "C:\\Users\\harun\\Desktop\\elektrik firma\\stitch_voltmarket_electrical_e_commerce\\volta-app\\.next"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "C:\\Users\\harun\\Desktop\\elektrik firma\\stitch_voltmarket_electrical_e_commerce\\volta-app"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

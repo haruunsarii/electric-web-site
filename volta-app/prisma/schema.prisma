@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Category {
+  id       String    @id @default(cuid())
+  slug     String    @unique
+  name     String
+  desc     String
+  products Product[]
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  name         String
+  description  String
+  price        Float
+  image        String
+  categorySlug String
+  category     Category @relation(fields: [categorySlug], references: [slug])
+}
+
+model User {
+  id       String  @id @default(cuid())
+  username String  @unique
+  password String
+  isDealer Boolean @default(false)
+}
+
+model Order {
+  id            String      @id @default(cuid())
+  orderNumber   String      @unique
+  customerName  String
+  customerPhone String
+  address       String
+  totalAmount   Float
+  discount      Float
+  status        String      @default("PENDING") // PENDING, COMPLETED, CANCELLED
+  items         OrderItem[]
+  createdAt     DateTime    @default(now())
+}
+
+model OrderItem {
+  id          String @id @default(cuid())
+  orderId     String
+  order       Order  @relation(fields: [orderId], references: [id])
+  productId   String
+  productName String
+  price       Float
+  quantity    Int
+}
+
+model DealerApplication {
+  id           String   @id @default(cuid())
+  companyName  String
+  contactName  String
+  phone        String
+  email        String
+  taxNumber    String
+  message      String?
+  status       String   @default("Bekliyor") // Bekliyor, Onaylandı, Reddedildi
+  createdAt    DateTime @default(now())
+}

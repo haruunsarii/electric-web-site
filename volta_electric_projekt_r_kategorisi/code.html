@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volta Electric - Projektör</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#ffb690",
+                        "surface": "#f7f9fb",
+                        "secondary": "#9d4300",
+                        "on-surface-variant": "#45464d",
+                        "outline": "#76777d",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#0d1c2f",
+                        "on-primary-container": "#7c839b",
+                        "secondary-fixed": "#ffdbca",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#341100",
+                        "on-tertiary-container": "#76859b",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#bec6e0",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary-fixed-variant": "#783200",
+                        "tertiary": "#000000",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "tertiary-fixed": "#d5e3fd",
+                        "surface-tint": "#565e74",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#5c2400",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#131b2e",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed-dim": "#bec6e0",
+                        "secondary-container": "#fd761a",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "xl": "64px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "container-max": "1280px",
+                        "lg": "40px",
+                        "base": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-technical": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "button-text": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-technical": ["13px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "button-text": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; color: #191c1e; }
+        .tech-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid #e0e3e5; }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08); }
+        .input-glow:focus { outline: none; border-color: #000000; box-shadow: 0 0 0 2px #e0e3e5; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<!-- Brand Logo -->
+<a class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight" href="#">VOLTA ELECTRIC</a>
+<!-- Search (Right aligned as per JSON) & Navigation -->
+<div class="flex items-center gap-md">
+<!-- Navigation Links (Web) -->
+<nav class="hidden md:flex items-center gap-sm">
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">Kurumsal</a>
+<!-- Active State on Kategoriler -->
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary pb-1 hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">Kategoriler</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">Katalog</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-highest transition-colors duration-200 px-3 py-2 rounded-md font-button-text text-button-text" href="#">İletişim</a>
+</nav>
+<!-- Search Input Area -->
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-10 pr-4 py-2 border border-outline-variant rounded bg-surface-container-lowest text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary w-48 transition-all" placeholder="Ürün ara..." type="text"/>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center gap-xs">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+<!-- Trailing Primary Action -->
+<a class="hidden md:inline-flex bg-primary text-on-primary font-button-text text-button-text px-4 py-2 rounded cursor-pointer active:scale-95 transition-transform" href="#">Bize Ulaşın</a>
+</div>
+</div>
+</header>
+<!-- Main Layout: SideNav + Content Canvas -->
+<div class="flex flex-1 max-w-container-max mx-auto w-full">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col gap-sm p-md h-full w-64 fixed left-0 top-20 bg-surface-container-low dark:bg-surface-container-highest border-r border-outline-variant dark:border-outline shadow-md dark:shadow-none z-40" style="top: 80px; height: calc(100vh - 80px);">
+<!-- Header Area -->
+<div class="mb-sm">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed">Kategoriler</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Endüstriyel Çözümler</p>
+</div>
+<!-- Tabs -->
+<nav class="flex flex-col gap-1 flex-1 overflow-y-auto">
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Ampul</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Led Paneller</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span>Ziller</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+<span>Sigortalar</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="linear_scale">linear_scale</span>
+<span>Bant Armatür</span>
+</a>
+<a class="flex items-center gap-xs px-sm py-xs text-on-surface-variant dark:text-on-surface hover:bg-surface-variant dark:hover:bg-inverse-surface hover:pl-2 transition-all duration-300 rounded font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="yard">yard</span>
+<span>Bahçe Armatür</span>
+</a>
+<!-- Active State: Projektör -->
+<a class="flex items-center gap-xs px-sm py-xs bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary font-semibold rounded-lg hover:pl-2 transition-all duration-300 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="flashlight_on" style="font-variation-settings: 'FILL' 1;">flashlight_on</span>
+<span>Projektör</span>
+</a>
+</nav>
+<!-- CTA -->
+<div class="mt-auto pt-sm border-t border-outline-variant">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary font-button-text text-button-text px-4 py-3 rounded hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Katalog İndir
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 p-gutter pb-xl min-h-screen">
+<!-- Page Header -->
+<div class="mb-lg">
+<div class="flex items-center gap-2 text-body-sm text-outline mb-2">
+<span>Kategoriler</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-medium">Projektör</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-4">Endüstriyel Projektör Serisi</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Zorlu dış mekan koşulları ve geniş alan aydınlatmaları için tasarlanmış yüksek lümenli, IP korumalı profesyonel projektör sistemleri.</p>
+</div>
+<!-- Filters & Grid Layout Container -->
+<div class="flex flex-col md:flex-row gap-lg items-start">
+<!-- Filter Sidebar (Inner) -->
+<aside class="w-full md:w-64 shrink-0 space-y-md glass-panel p-md rounded-lg sticky top-28">
+<div class="flex items-center justify-between mb-sm border-b border-outline-variant pb-2">
+<span class="font-button-text text-button-text text-primary">Filtreler</span>
+<span class="material-symbols-outlined text-sm text-outline cursor-pointer hover:text-primary">filter_list</span>
+</div>
+<!-- Power Filter -->
+<div>
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-semibold mb-xs uppercase tracking-wider">Güç (Watt)</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">30W</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">50W</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">100W</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">200W</span>
+</label>
+</div>
+</div>
+<!-- Light Color Filter -->
+<div class="pt-2 border-t border-outline-variant">
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-semibold mb-xs uppercase tracking-wider">Işık Rengi</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Beyaz (6500K)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">Amber (3000K)</span>
+</label>
+</div>
+</div>
+<!-- IP Rating Filter -->
+<div class="pt-2 border-t border-outline-variant">
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-semibold mb-xs uppercase tracking-wider">IP Sınıfı</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">IP65 (Dış Mekan)</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox h-4 w-4 text-primary border-outline-variant rounded-sm focus:ring-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors">IP66 (Ağır Koşul)</span>
+</label>
+</div>
+</div>
+<button class="w-full mt-sm py-2 border border-primary text-primary font-button-text text-button-text rounded hover:bg-surface-variant transition-colors">Filtreleri Temizle</button>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<!-- Sorting/Info Bar -->
+<div class="flex justify-between items-center mb-md pb-2 border-b border-outline-variant">
+<span class="font-body-sm text-body-sm text-on-surface-variant">42 ürün listeleniyor</span>
+<select class="border-outline-variant rounded bg-surface-container-lowest text-body-sm font-body-sm focus:ring-primary focus:border-primary py-1 pl-3 pr-8">
+<option>Önerilen Sıralama</option>
+<option>Güç (Artan)</option>
+<option>Güç (Azalan)</option>
+</select>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-md">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded card-hover flex flex-col overflow-hidden relative">
+<!-- Status Chip -->
+<div class="absolute top-2 right-2 bg-surface-container-highest text-on-surface font-label-technical text-label-technical px-2 py-0.5 rounded-sm lowercase font-bold z-10">stokta</div>
+<!-- Image Area -->
+<div class="bg-surface-container-low h-48 w-full flex items-center justify-center p-4">
+<img class="object-contain h-full w-full mix-blend-multiply opacity-90" data-alt="A sleek, modern industrial LED floodlight fixture (50W) with a robust dark grey metallic casing. High-key lighting, bright minimalist background. Technical B2B catalog photography style, sharp focus on the heat sink fins and clear glass lens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjTKLia2tLMLEob-cTUMNf30z1LnDICwSgbIwZe5_w5oIstPAAO8dDPZsDMu6tWEGp32qxAFZwtr-v5kVA0yVubskkXfEcqRPPhzkTmaCIGC40zRRu1Xk22lkj0Yx1icsf-ZTF6p0wu_WAJuPWTa4xnHtDs3LOOu2KxFJQ1KKPisPlZCSzy5C7UbV4S-2XjKUsxQ7VNASjsVxt5np74pc8jRYKPDmtogTFsEhJnvJwDNdzVEcEYQcRPQOBJ4a7YMP80DFAmGwIantl"/>
+</div>
+<!-- Content Area -->
+<div class="p-4 flex flex-col flex-1">
+<h4 class="font-headline-md text-headline-md text-on-background text-lg leading-tight mb-1">PRO-X Serisi 50W</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">SMD LED Dış Mekan Projektör</p>
+<!-- Tech Specs -->
+<div class="mt-auto bg-surface-container-low p-2 rounded border border-surface-variant space-y-1 font-label-technical text-label-technical text-on-surface-variant">
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>GÜÇ</span><span class="text-on-background font-bold">50W</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>LÜMEN</span><span class="text-on-background font-bold">5000lm</span>
+</div>
+<div class="flex justify-between">
+<span>KORUMA</span><span class="text-on-background font-bold">IP65</span>
+</div>
+</div>
+<!-- Action -->
+<button class="mt-4 w-full border border-primary text-primary hover:bg-primary hover:text-on-primary font-button-text text-button-text py-2 rounded transition-colors uppercase">İncele</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded card-hover flex flex-col overflow-hidden relative">
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-technical text-label-technical px-2 py-0.5 rounded-sm lowercase font-bold z-10">yeni</div>
+<div class="bg-surface-container-low h-48 w-full flex items-center justify-center p-4">
+<img class="object-contain h-full w-full mix-blend-multiply opacity-90" data-alt="A heavy-duty 100W industrial LED floodlight with a distinct orange accent ring around the lens. Dark grey cast aluminum body. High-key lighting, bright minimalist background. Technical B2B catalog photography style, sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAThx42tptUiFlcCdMOgtuupXjHdFEOPZ9WkKOxvZZgf4FqHdxV3IPLRtwNe3QLhvlySjGxIt6i8UppzKFM3ACVDGeFZxA1aNITeRxwsC3hC4coAdg4tjKarphd6sMpmcawiET6Syxfk_dUlWpFMKzO0HZZwbrcq993g5WqXDh1DkjHBKOf6uJTSu6A12rQTQu6rFGsc0q6kRktRluo_UCuobXo4C6FXmWIF5C64F4PgRpw79SUKMuvDRafuf9djmyOLmh1QC8rvkc7"/>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<h4 class="font-headline-md text-headline-md text-on-background text-lg leading-tight mb-1">HEAVY-DUTY 100W</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Asimetrik Lensli Projektör</p>
+<div class="mt-auto bg-surface-container-low p-2 rounded border border-surface-variant space-y-1 font-label-technical text-label-technical text-on-surface-variant">
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>GÜÇ</span><span class="text-on-background font-bold">100W</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>LÜMEN</span><span class="text-on-background font-bold">11000lm</span>
+</div>
+<div class="flex justify-between">
+<span>KORUMA</span><span class="text-on-background font-bold">IP66</span>
+</div>
+</div>
+<button class="mt-4 w-full border border-primary text-primary hover:bg-primary hover:text-on-primary font-button-text text-button-text py-2 rounded transition-colors uppercase">İncele</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded card-hover flex flex-col overflow-hidden relative">
+<div class="absolute top-2 right-2 bg-surface-container-highest text-on-surface font-label-technical text-label-technical px-2 py-0.5 rounded-sm lowercase font-bold z-10">pro_grade</div>
+<div class="bg-surface-container-low h-48 w-full flex items-center justify-center p-4">
+<img class="object-contain h-full w-full mix-blend-multiply opacity-90" data-alt="A massive 200W stadium-style LED floodlight cluster, composed of multiple square modules on a sturdy mounting bracket. Matte black finish. High-key lighting, bright minimalist background. Technical B2B catalog photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZW6-E3f0T6rMOMr3EBkzixBvSmBJGswIDkyr9xhv4WjJ7aZvaAPANA9pMNzjXpspibKDprkLTE5wxfUEf5Lgh4sS1SQHGYa5zkYCPS_ZZPIrilXhUt5XLfMeOQKHIlBMz5YtlXaR_k3C_kDS6lXCIfaLeKCJnumoul7DBd1KWWIuamIrdmIQOu-0oIW0oaO3CKBUjEhezEGDbIZL-LGC0mnm11HWyM0lDXInkt8bpf5QS3iIstJiioqvmU2jf-Dr3YSVhBrI6ddO"/>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<h4 class="font-headline-md text-headline-md text-on-background text-lg leading-tight mb-1">ARENA MAX 200W</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Modüler Saha Projektörü</p>
+<div class="mt-auto bg-surface-container-low p-2 rounded border border-surface-variant space-y-1 font-label-technical text-label-technical text-on-surface-variant">
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>GÜÇ</span><span class="text-on-background font-bold">200W</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>LÜMEN</span><span class="text-on-background font-bold">24000lm</span>
+</div>
+<div class="flex justify-between">
+<span>KORUMA</span><span class="text-on-background font-bold">IP66</span>
+</div>
+</div>
+<button class="mt-4 w-full border border-primary text-primary hover:bg-primary hover:text-on-primary font-button-text text-button-text py-2 rounded transition-colors uppercase">İncele</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded card-hover flex flex-col overflow-hidden relative">
+<div class="absolute top-2 right-2 bg-surface-container-highest text-on-surface font-label-technical text-label-technical px-2 py-0.5 rounded-sm lowercase font-bold z-10">stokta</div>
+<div class="bg-surface-container-low h-48 w-full flex items-center justify-center p-4">
+<img class="object-contain h-full w-full mix-blend-multiply opacity-90" data-alt="A compact 30W slim LED floodlight, very thin profile, light grey color. High-key lighting, bright minimalist background. Technical B2B catalog photography style, showing the mounting arm and cable gland." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUWewrlG9cIMLpmHrEVdFGjd7Z_mUpLtEx8mAt-RZxGsW51DzrANdvFS7K47a2PlRu7oHrtuvTxbHuic_zyafoC8Ls7O6uVpueeIU_p_tBCdYWTH1kXEC_7n1azQeJm1KCNZ3ZUNCn5pXLbIMiQSKO--Yc1donJMLDpGoA8fK67ZJDL2b_W50CotGNcgZ7g193QT0r9dJCBQ76LUENt8dk9HRtF91Y8i36u3uLTbJrt5dg26q8G7qeUnTGTlkjzD-xsCEefcBxgO8H"/>
+</div>
+<div class="p-4 flex flex-col flex-1">
+<h4 class="font-headline-md text-headline-md text-on-background text-lg leading-tight mb-1">SLIM-LITE 30W</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">İnce Kasa Mimari Projektör</p>
+<div class="mt-auto bg-surface-container-low p-2 rounded border border-surface-variant space-y-1 font-label-technical text-label-technical text-on-surface-variant">
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>GÜÇ</span><span class="text-on-background font-bold">30W</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-1">
+<span>LÜMEN</span><span class="text-on-background font-bold">2700lm</span>
+</div>
+<div class="flex justify-between">
+<span>KORUMA</span><span class="text-on-background font-bold">IP65</span>
+</div>
+</div>
+<button class="mt-4 w-full border border-primary text-primary hover:bg-primary hover:text-on-primary font-button-text text-button-text py-2 rounded transition-colors uppercase">İncele</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-lg flex justify-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant rounded text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="w-8 h-8 flex items-center justify-center border border-primary bg-primary text-on-primary rounded font-button-text">1</button>
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant rounded text-on-surface hover:bg-surface-container transition-colors font-button-text">2</button>
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant rounded text-on-surface hover:bg-surface-container transition-colors font-button-text">3</button>
+<span class="w-8 h-8 flex items-center justify-center text-on-surface-variant">...</span>
+<button class="w-8 h-8 flex items-center justify-center border border-outline-variant rounded text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-primary-fixed w-full mt-xl border-t border-outline-variant dark:border-outline no-shadows">
+<div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<!-- Brand -->
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed font-bold tracking-tight">VOLTA ELECTRIC</div>
+<!-- Links -->
+<div class="flex flex-wrap justify-center gap-x-md gap-y-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">KVKK</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Garanti Koşulları</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">Teslimat</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-primary hover:opacity-80 transition-opacity cursor-pointer" href="#">İade Politikası</a>
+</div>
+<!-- Copyright -->
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                © 2024 Volta Electric. Tüm hakları saklıdır.
+            </div>
+</div>
+</footer>
+</body></html>
