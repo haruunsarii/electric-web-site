@@ -8,14 +8,36 @@ export default function AdminLoginPage() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "admin123") {
-      localStorage.setItem("volta_is_admin", "true");
-      router.push("/admin");
-    } else {
-      setError("Hatalı şifre!");
-      setPassword("");
+    setError("");
+    setIsLoading(true);
+
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: "admin", password })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.isAdmin) {
+          localStorage.setItem("volta_is_admin", "true");
+          router.push("/admin");
+        } else {
+          setError("Yönetici yetkiniz bulunmuyor.");
+        }
+      } else {
+        const data = await res.json();
+        setError(data.error || "Hatalı şifre!");
+      }
+    } catch (err) {
+      setError("Bağlantı hatası oluştu.");
+    } finally {
+      setIsLoading(false);
     }
   };
 

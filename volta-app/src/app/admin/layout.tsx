@@ -30,6 +30,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { name: "Siparişler", path: "/admin/siparisler", icon: "shopping_cart" },
     { name: "Ürünler", path: "/admin/urunler", icon: "inventory_2" },
     { name: "Bayi Başvuruları", path: "/admin/bayiler", icon: "handshake" },
+    { name: "Ayarlar", path: "/admin/ayarlar", icon: "settings" },
   ];
 
   if (isChecking) {

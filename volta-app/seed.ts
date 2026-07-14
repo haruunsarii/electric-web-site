@@ -62,6 +62,17 @@ async function main() {
     }
   });
 
+  // Create Default Admin User
+  await prisma.user.upsert({
+    where: { username: 'admin' },
+    update: {},
+    create: {
+      username: 'admin',
+      password: 'admin123',
+      isAdmin: true
+    }
+  });
+
   console.log('Database successfully seeded!');
 }
 

@@ -33,6 +33,7 @@ model User {
   username String  @unique
   password String
   isDealer Boolean @default(false)
+  isAdmin  Boolean @default(false)
 }
 
 model Order {

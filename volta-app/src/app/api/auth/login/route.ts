@@ -19,7 +19,8 @@ export async function POST(request: Request) {
     return NextResponse.json({
       id: user.id,
       username: user.username,
-      isDealer: user.isDealer
+      isDealer: user.isDealer,
+      isAdmin: user.isAdmin
     });
   } catch (error) {
     console.error('Login error:', error);
