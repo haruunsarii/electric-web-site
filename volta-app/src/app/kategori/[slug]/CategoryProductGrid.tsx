@@ -16,21 +16,19 @@ export default function CategoryProductGrid({ initialProducts }: { initialProduc
   const [sortOption, setSortOption] = useState("default");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const filteredAndSortedProducts = useMemo(() => {
     let result = [...initialProducts];
 
-    // Filter by Min Price
     if (minPrice !== "" && !isNaN(Number(minPrice))) {
       result = result.filter(p => p.price >= Number(minPrice));
     }
 
-    // Filter by Max Price
     if (maxPrice !== "" && !isNaN(Number(maxPrice))) {
       result = result.filter(p => p.price <= Number(maxPrice));
     }
 
-    // Sort
     switch (sortOption) {
       case "price-asc":
         result.sort((a, b) => a.price - b.price);
@@ -45,7 +43,6 @@ export default function CategoryProductGrid({ initialProducts }: { initialProduc
         result.sort((a, b) => b.name.localeCompare(a.name, "tr"));
         break;
       default:
-        // default keeps the original order (or database order)
         break;
     }
 
@@ -54,9 +51,23 @@ export default function CategoryProductGrid({ initialProducts }: { initialProduc
 
   return (
     <div className="flex flex-col lg:flex-row gap-lg items-start fade-in">
+      {/* Mobile Filter Toggle Button */}
+      <button 
+        onClick={() => setIsFilterOpen(!isFilterOpen)}
+        className="lg:hidden w-full bg-surface-container border border-outline-variant text-on-surface font-button-text py-sm px-md rounded-lg flex items-center justify-between"
+      >
+        <div className="flex items-center gap-xs">
+          <span className="material-symbols-outlined text-[20px]">tune</span>
+          Filtrele & Sırala
+        </div>
+        <span className="material-symbols-outlined transition-transform" style={{ transform: isFilterOpen ? "rotate(180deg)" : "rotate(0deg)" }}>
+          expand_more
+        </span>
+      </button>
+
       {/* Sidebar / Filters */}
-      <aside className="w-full lg:w-64 flex-shrink-0 bg-surface-container-lowest border border-outline-variant rounded-xl p-md sticky top-24">
-        <h2 className="font-headline-sm text-primary mb-md border-b border-outline-variant pb-xs flex items-center gap-xs">
+      <aside className={`w-full lg:w-64 flex-shrink-0 bg-surface-container-lowest border border-outline-variant rounded-xl p-md lg:sticky lg:top-24 ${isFilterOpen ? 'block' : 'hidden lg:block'}`}>
+        <h2 className="hidden lg:flex font-headline-sm text-primary mb-md border-b border-outline-variant pb-xs items-center gap-xs">
           <span className="material-symbols-outlined text-[20px]">tune</span>
           Filtrele & Sırala
         </h2>
